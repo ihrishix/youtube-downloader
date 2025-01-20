@@ -117,7 +117,7 @@ export default function Home() {
                   <RenderVideoThumbnail thumbnail={thumbnail} />
                 </div>
                 <div className="relative flex w-full h-[90%] justify-between mt-2 gap-4">
-                  {videoFormats.length == 0 ? (
+                  {videoFormats == undefined || videoFormats.length == 0 ? (
                     <div className="w-full h-full flex justify-center items-center ">
                       {showErrorDetails ? (
                         <div className="font-semibold text-red-500 text-xl">
