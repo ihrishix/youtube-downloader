@@ -1,14 +1,6 @@
+import { downloadVideoSchema } from "@/utils/schema";
 import { getVideoStream } from "@/utils/youtube-helper";
 import { NextRequest, NextResponse } from "next/server";
-import { z } from "zod";
-
-export const downloadVideoSchema = z.object({
-  videoId: z.string().length(11),
-  itag: z.number(),
-  container: z.string(),
-  contentLength: z.string(),
-  filename: z.string(),
-});
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
