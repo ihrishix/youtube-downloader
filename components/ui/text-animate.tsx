@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion, MotionProps, Variants } from "motion/react";
 import { ElementType, useEffect, useState } from "react";
@@ -339,7 +341,7 @@ export function TextAnimate({
       }
     : { container: defaultContainerVariants, item: defaultItemVariants };
 
-  let [segments, setSegments] = useState<string[]>([]);
+  const [segments, setSegments] = useState<string[]>([]);
 
   useEffect(() => {
     switch (by) {
@@ -357,7 +359,7 @@ export function TextAnimate({
         setSegments([children]);
         break;
     }
-  }, [children]);
+  }, [children, by]);
 
   return (
     <AnimatePresence mode="popLayout">

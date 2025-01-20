@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Spinner from "./ui/spinner";
 
 export const RenderVideoThumbnail = ({ thumbnail }: { thumbnail: string }) => {
   if (thumbnail.length == 0) {

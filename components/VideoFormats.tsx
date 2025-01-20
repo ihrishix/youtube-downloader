@@ -1,9 +1,8 @@
 import { VideoFormat } from "@/utils/youtube-helper";
-import { div } from "framer-motion/client";
-import VideoFormatButton from "./ui/videoFormat-button";
 import { VolumeXIcon } from "lucide-react";
 import { Dispatch, SetStateAction } from "react";
 import { DownloadStatus } from "./DownloadProgress";
+import VideoFormatButton from "./ui/videoFormat-button";
 
 export const RenderVideoFormats = ({
   formats,

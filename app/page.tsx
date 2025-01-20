@@ -6,11 +6,8 @@ import {
   DownloadStatus,
 } from "@/components/DownloadProgress";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import { BorderBeam } from "@/components/ui/border-beam";
 import { Input } from "@/components/ui/input";
 import MorphingText from "@/components/ui/morphing-text";
-import { Progress } from "@/components/ui/progress";
-import RetroGrid from "@/components/ui/retro-grid";
 import Spinner from "@/components/ui/spinner";
 import { TextAnimate } from "@/components/ui/text-animate";
 import { RenderVideoFormats } from "@/components/VideoFormats";
@@ -208,9 +205,9 @@ function validateYoutubeIdOrUrl(
   const urlRegex =
     /^(?:(?:https?:)?\/\/)?(?:www\.)?(?:m\.)?(?:youtu(?:be)?\.com\/(?:v\/|embed\/|watch(?:\/|\?v=))|youtu\.be\/)((?:\w|-){11})(?:\S+)?$/;
 
-  var videoId = null;
-  var matchUrl = urlRegex.exec(urlOrId);
-  var matchId = urlRegex.exec(`https://www.youtube.com/watch?v=${urlOrId}`);
+  let videoId = null;
+  const matchUrl = urlRegex.exec(urlOrId);
+  const matchId = urlRegex.exec(`https://www.youtube.com/watch?v=${urlOrId}`);
 
   if (matchUrl) {
     videoId = matchUrl[1];
